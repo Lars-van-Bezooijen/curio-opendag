@@ -92,6 +92,10 @@ textarea {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+.wrapper{
+  width: 70%;
+  margin: 0 auto;
+}
 
 /* HEADER */
 header{
@@ -166,6 +170,52 @@ img.header-logo{
 .banner .nav-item:hover::before{
   height: 100%;
   transition: .3s ease-out;
+}
+
+/* MAIN PAGE */
+.accordion{
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  margin: 25px 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+.accordion-active, .accordion:hover {
+  background-color: rgba(223, 223, 223, 0.3);
+}
+.accordion-info {
+  padding: 0 18px;
+  background-color: red;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s linear;
+}
+.accordion-active .lines .line.turn{
+  transform: translate(0, 50%) rotate(90deg);
+  transition: .3s ease-in-out;
+}
+.lines{
+  margin-right: 15px;
+}
+.line{
+  transform: translate(0, -50%) rotate(90deg);
+  position: relative;
+  width: 3px;
+  height: 21px;
+  background: black;
+}
+.line.turn{
+  transform: translate(0, 50%);
+  transition: .3s ease-in-out;
+  background: black;
 }
 
 

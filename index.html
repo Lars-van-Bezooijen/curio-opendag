@@ -24,13 +24,6 @@
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
-  
-
-
-
-
   <header>
     <div class="navbar">
       <img class="header-logo" src="img/logo-white.png" alt="">
@@ -44,29 +37,29 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam?</p>
       <div class="nav-box">
         <nav>
-          <a class="nav-item" href="#">
+          <a class="nav-item" href="#vakken">
             <i class="fa-solid fa-share"></i>
             Vakken
           </a>
-          <a class="nav-item" href="#">
+          <a class="nav-item" href="#rooster">
             <i class="fa-solid fa-share"></i>
             Rooster
           </a>
-          <a class="nav-item" href="#">
+          <a class="nav-item" href="#jaar-indeling">
             <i class="fa-solid fa-share"></i>
             Jaar indeling
           </a>
         </nav>
         <nav>
-          <a class="nav-item" href="#">
+          <a class="nav-item" href="#versnellen">
             <i class="fa-solid fa-share"></i>
             Versnellen
           </a>
-          <a class="nav-item" href="#">
+          <a class="nav-item" href="#vakanties">
             <i class="fa-solid fa-share"></i>
             Vakanties
           </a>
-          <a class="nav-item" href="#">
+          <a class="nav-item" href="#docenten">
             <i class="fa-solid fa-share"></i>
             Docenten
           </a>
@@ -75,11 +68,28 @@
     </div>
   </header>
 
-
-
-
-
-
+  <div class="wrapper">
+    <main>
+      <button class="accordion" id="vakken">
+        <div class="lines">
+          <div class="line turn"></div>
+          <div class="line"></div>
+        </div>
+        Vakken
+      </button>
+      <div class="accordion-info">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, repellat tempora? Voluptates officia nisi natus rem iusto. Debitis, odit placeat.</p>
+      </div>
+      <button class="accordion">Rooster</button>
+      <div class="accordion-info">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, repellat tempora? Voluptates officia nisi natus rem iusto. Debitis, odit placeat.</p>
+      </div>
+      <button class="accordion">Jaar indeling</button>
+      <div class="accordion-info">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, repellat tempora? Voluptates officia nisi natus rem iusto. Debitis, odit placeat.</p>
+      </div>
+    </main>
+  </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
@@ -92,5 +102,39 @@
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
+
+<script>
+  var element = document.getElementsByClassName("accordion");
+
+  for(i = 0; i<element.length; i++)
+  {
+    element[i].addEventListener("click", function()
+    {
+      this.classList.toggle("accordion-active");
+
+      var info = this.nextElementSibling;
+      // var lines = this.firstChildElement;
+      // var line = this.firstChildElement;
+      
+      if (info.style.display === "block") 
+      {
+        info.style.display = "none";
+      } 
+      else 
+      {
+        info.style.display = "block";
+      }
+
+      if (info.style.maxHeight) 
+      {
+        info.style.maxHeight = null;
+      } 
+      else 
+      {
+        info.style.maxHeight = info.scrollHeight + "px";
+      } 
+    });
+  }
+</script>
 
 </html>
