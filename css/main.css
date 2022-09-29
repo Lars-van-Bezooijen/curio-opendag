@@ -88,9 +88,13 @@ textarea {
    ========================================================================== */
 
 *{
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+html{
+  scroll-behavior: smooth;
 }
 .wrapper{
   width: 70%;
@@ -187,6 +191,7 @@ img.header-logo{
   width: 100%;
   outline: none;
   border: none;
+  background: rgba(0,0,0,0.05);
 }
 .accordion-info-container{
   display: flex;
@@ -194,7 +199,7 @@ img.header-logo{
   margin-bottom: 30px;
 }
 .accordion-active, .accordion:hover {
-  background-color: rgba(223, 223, 223, 0.3);
+  background-color: rgba(223, 223, 223, 0.8);
 }
 .accordion-info {
   padding: 0 18px;
@@ -226,7 +231,17 @@ img.header-logo{
 .split{
   width: 50%;
 }
+.split.large{
+  width: 100%;
+}
+.split.large img{
+  margin-left: 0;
+}
 .split img{
+  width: 70%;
+  margin-left: 10%;
+}
+.split img.large{
   width: 100%;
 }
 .split h3{
@@ -235,7 +250,112 @@ img.header-logo{
 }
 .split p{
   line-height: 1.5em;
+  margin-bottom: 20px;
 }
+.split p.margin-top{
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+/* CAROUSEL */
+.carousel {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.carousel-info{
+  display: flex;
+  margin-top: 100px;
+}
+.carousel-split{
+  width: 50%;
+}
+.slides {
+  display: none;
+}
+.prev-btn, .next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next-btn {
+  color: black;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.info-container{
+  margin: 10px 50px 10px 20px;
+}
+.slide-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+}
+/* .slide-text-info{
+  
+} */
+.main-text{
+  font-weight: bold;
+  font-size: 24px;  
+}
+.dots{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 100px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 15px;
+  display: inline-block;
+  transition: 0.1s ease;
+}
+.dot:hover{
+  background-color: #717171;
+}
+.active {
+  background-color: #717171;
+  width: 30px;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: .01s;
+}
+.bold{
+  font-weight: bold;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
 
 
 
