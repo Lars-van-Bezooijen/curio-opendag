@@ -240,6 +240,7 @@ img.header-logo{
 .split img{
   width: 70%;
   margin-left: 10%;
+  margin-bottom: 30px;
 }
 .split img.large{
   width: 100%;
