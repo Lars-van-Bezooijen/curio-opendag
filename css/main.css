@@ -153,7 +153,6 @@ img.header-logo{
   position: relative;
   z-index: 1;
   margin: 12px 0;
-  max-width: max-content;
   padding: 5px 16px 5px 10px;
 }
 .banner a{
