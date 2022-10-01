@@ -280,6 +280,7 @@ img.header-logo{
   display: none;
 }
 .prev-btn, .next-btn {
+  background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -310,12 +311,14 @@ img.header-logo{
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
-  width: 100%;
+  width: calc(50% + 50px);
   text-align: left;
+  background: black;
 }
-/* .slide-text-info{
-  
-} */
+.slide-text.reverse{
+  text-align: right;
+  right: 0;
+}
 .main-text{
   font-weight: bold;
   font-size: 24px;  
@@ -342,24 +345,12 @@ img.header-logo{
   background-color: #717171;
   width: 30px;
 }
-.fade {
-  animation-name: fade;
-  animation-duration: .01s;
-}
 .bold{
   font-weight: bold;
 }
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.carousel-img{
+  width: 100%;
 }
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 900px) {
   .banner {
